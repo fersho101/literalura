@@ -1,5 +1,8 @@
 package com.ferchoo.literalura.principal;
 
-public class Principal {
+import org.springframework.stereotype.Component;
 
+@Component
+public class Principal {
+	
 }
