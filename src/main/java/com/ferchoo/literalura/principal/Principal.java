@@ -53,6 +53,7 @@ public class Principal {
 			String idiomas = menu.leeEntrada();
 			service.listarLibrosPorIdioma(idiomas);
 			break;
+		
 		default:
 			System.out.println("Opcion invalida: " + op);
 			throw new IllegalArgumentException("Unexpected value: " + op);

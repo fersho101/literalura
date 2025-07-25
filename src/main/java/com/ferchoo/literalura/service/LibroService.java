@@ -93,13 +93,24 @@ public class LibroService {
 		return null;
 	}
 
-	public Object listarAutoresRegistrados() {
-		// TODO Auto-generated method stub
-		return null;
+	public void listarAutoresRegistrados() {
+		List<Persona> autores = personaRepository.findAll();
+		if(autores.isEmpty()) {
+			System.out.println("***");
+			System.out.println(" +++ Registro de autores vacio 😒 🚧 +++");
+			System.out.println("***");
+		} else {
+			autores.stream().forEach(a -> imprimeAutor(a));
+		}		
 	}
 
 	public void listarAutoresVivosPorAño(int año) {
-		// TODO Auto-generated method stub		
+		List<Persona> autores = personaRepository.findByAñoAutor(año);
+		if(autores.isEmpty()) {
+			System.out.println("***");
+			System.out.printf(" +++ Registro de autores vacio en el año %d 😒 🚧 +++\n", año);
+			System.out.println("***");
+		}
 	}
 
 	public void listarIdiomas() {
@@ -115,6 +126,11 @@ public class LibroService {
 	private void imprimeLibro(Libro libro) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	private Object imprimeAutor(Persona a) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
