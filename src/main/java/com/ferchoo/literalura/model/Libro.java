@@ -55,6 +55,68 @@ public class Libro {
 				.stream()
 				.map(a -> new Persona(a)).collect(Collectors.toList());
 	}
+	
+	
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getIdLibro() {
+		return idLibro;
+	}
+
+	public void setIdLibro(Long idLibro) {
+		this.idLibro = idLibro;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public List<Idioma> getIdiomas() {
+		return idiomas;
+	}
+
+	public void setIdiomas(List<Idioma> idiomas) {
+		this.idiomas = idiomas;
+	}
+
+	public Long getDescargas() {
+		return descargas;
+	}
+
+	public void setDescargas(Long descargas) {
+		this.descargas = descargas;
+	}
+
+	public boolean isCopyright() {
+		return copyright;
+	}
+
+	public void setCopyright(boolean copyright) {
+		this.copyright = copyright;
+	}
+
+	public List<Persona> getAutores() {
+		return autores;
+	}
+
+	public void setAutores(List<Persona> autores) {
+		List<Libro> libros = autores.stream().map(
+				Libro -> this).collect(Collectors.toList());
+		autores.forEach(p -> p.setLibros(libros));
+		this.autores = autores;
+	}
 
 	@Override
 	public String toString() {

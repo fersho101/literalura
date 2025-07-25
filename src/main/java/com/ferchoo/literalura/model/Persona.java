@@ -38,6 +38,48 @@ public class Persona {
 		this.añoNacimiento = persona.añoNacimiento();
 		this.añoDefuncion = persona.añoDefuncion();
 	}
+	
+	
+
+	public Long getIdLong() {
+		return idLong;
+	}
+
+	public void setIdLong(Long idLong) {
+		this.idLong = idLong;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Integer getAñoNacimiento() {
+		return añoNacimiento;
+	}
+
+	public void setAñoNacimiento(Integer añoNacimiento) {
+		this.añoNacimiento = añoNacimiento;
+	}
+
+	public Integer getAñoDefuncion() {
+		return añoDefuncion;
+	}
+
+	public void setAñoDefuncion(Integer añoDefuncion) {
+		this.añoDefuncion = añoDefuncion;
+	}
+
+	public List<Libro> getLibros() {
+		return libros;
+	}
+
+	public void setLibros(List<Libro> libros) {
+		this.libros = libros;
+	}
 
 	@Override
 	public String toString() {
